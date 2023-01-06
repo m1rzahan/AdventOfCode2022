@@ -11,11 +11,11 @@ scores = {
   ('C', 'Y'): 2
 }
 with open("day2input.txt") as f:
-  totalScsore = 0
+  totalScore = 0
   for line in f:
    characters = list(line.split())
-   for a, b in zip(characters[::2], characters[1::2]):
-    if (a, b) in scores:
-     totalScsore += scores[(a, b)]
-    print(totalScsore)
+   for opponent, me in zip(characters[::2], characters[1::2]):
+    if (opponent, me) in scores:
+     totalScore += scores[(opponent, me)]
+    print(totalScore)
 
